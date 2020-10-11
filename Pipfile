@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+ipykernel = "*"
+
+[packages]
+numpy = "*"
+scipy = "*"
+matplotlib = "*"
+pandas = "*"
+boto3 = "*"
+sagemaker = "*"
+xeek = {editable = true,path = "."}
+scikit-learn = "*"
+
+[requires]
+python_version = "3.6"
