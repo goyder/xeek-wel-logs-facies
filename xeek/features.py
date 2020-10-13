@@ -1,8 +1,23 @@
+# Map our column names
 metadata_features = ["DEPTH_MD", "X_LOC", "Y_LOC", "Z_LOC", "GROUP", "FORMATION"]
 continuous_metadata_features = ["DEPTH_MD", "X_LOC", "Y_LOC", "Z_LOC"]
 well_log_features = ["BS", "CALI", "RDEP", "RHOB", "GR", "SGR", "RMED", "ROP", "NPHI", "PEF", "RSHA", "DTS", "DTC"]
 interp_features = ["FORCE_2020_LITHOFACIES_LITHOLOGY", "FORCE_2020_LITHOFACIES_CONFIDENCE"]
 target = ["FORCE_2020_LITHOFACIES_LITHOLOGY"]
+
+lithology_mapping = {30000: 0,
+                     65030: 1,
+                     65000: 2,
+                     80000: 3,
+                     74000: 4,
+                     70000: 5,
+                     70032: 6,
+                     88000: 7,
+                     86000: 8,
+                     99000: 9,
+                     90000: 10,
+                     93000: 11}
+lithology_inverse_mapping = {y: x for x, y in lithology_mapping.items()}
 
 
 def feature_presence_by_well(df, missing_data_threshold=0.5):
