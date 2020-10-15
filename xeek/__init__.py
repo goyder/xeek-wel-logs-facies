@@ -12,8 +12,3 @@ processed_data_dir = join(data_dir, "processed")
 raw_train_filepath = join(external_data_dir, "train.csv")
 raw_test_filepath = join(external_data_dir, "test.csv")
 penalty_matrix_filepath = join(external_data_dir, "penalty_matrix.npy")
-
-# Validate our input files are good to go...
-for filepath in (raw_train_filepath, raw_test_filepath, penalty_matrix_filepath):
-    if not os.path.exists(filepath):
-        raise FileNotFoundError("Could not find input file '{}'.")
